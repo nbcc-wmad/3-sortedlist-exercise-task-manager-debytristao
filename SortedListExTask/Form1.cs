@@ -24,12 +24,12 @@ namespace SortedListExTask
             {
                 if (txtTask.Text == string.Empty)
                 {
-                    MessageBox.Show("You must endere a task");
+                    MessageBox.Show("You must enter a task", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if(taskList.ContainsKey(dtpTaskDate.Value.Date))
                 {
 
-                    MessageBox.Show("Only one task for per date is allowed");
+                    MessageBox.Show("Only one task for per date is allowed","Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Error));
                     return;
 
                 }
@@ -60,7 +60,7 @@ namespace SortedListExTask
         {
             if (lstTasks.SelectedIndex == -1)
             {
-                MessageBox.Show("You must select a task to remove", "Invalid Date");
+                MessageBox.Show("You must select a task to remove", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
